@@ -4,6 +4,7 @@ body {
   padding: 0;
 }
 
+/* Header styles */
 header {
   background-color: #333;
   color: white;
@@ -14,71 +15,30 @@ header h1 {
   margin: 0;
 }
 
-.navigation {
-  background-color: #333;
-  padding: 1rem;
-}
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 0;
-}
-
-
-.navigation li {
-  margin: 0;
-  animation: slideIn 0.5s ease-in-out;
-}
-
-nav ul li {
-  margin: 0;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  position: relative;
-}
-
-nav ul li a.active {
-  font-weight: bold;
-}
-
-.navigation a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #ff6347;
-  transition: width 0.3s;
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-}
-
-.navigation a:hover::after {
-  width: 100%;
-}
-
+/* Main content styles */
 main {
   padding: 2rem;
 }
 
+/* Section styles */
+section {
+  display: block; /* Ensure sections are displayed for debugging */
+}
+
+/* Profile photo styles */
 .profile-photo {
   max-width: 150px;
   border-radius: 50%;
 }
 
+/* Form error message styles */
 .error-message {
   color: red;
   display: none;
 }
 
+/* Footer styles */
 footer {
   background-color: #333;
   color: white;
@@ -87,15 +47,4 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(-10px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }

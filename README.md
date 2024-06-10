@@ -3,41 +3,6 @@
 
 This is a single-page application utilizing react. The project showcases various sections such as About Me, Portfolio, Contact, and Resume.
 
-The directory structure of the project is as follows:
-Meactive-Portfolio
-│
-├── portfolio
-│ ├── public
-│ │ └── index.html
-│ ├── src
-│ │ ├── assets
-│ │ │ ├── weather.jpg
-│ │ │ ├── github-logo.png
-│ │ │ ├── linkedin-logo.png
-│ │ │ ├── twitter-logo.png
-│ │ │ └── your-resume.pdf
-│ │ ├── components
-│ │ │ ├── Header.jsx
-│ │ │ ├── Footer.jsx
-│ │ │ ├── Navigation.jsx
-│ │ │ └── styles
-│ │ │ ├── Navigation.css
-│ │ │ ├── Footer.css
-│ │ ├── pages
-│ │ │ ├── About.jsx
-│ │ │ ├── Contact.jsx
-│ │ │ ├── Portfolio.jsx
-│ │ │ ├── Resume.jsx
-│ │ │ └── styles
-│ │ │ ├── About.css
-│ │ │ ├── Contact.css
-│ │ │ ├── Portfolio.css
-│ │ │ └── Resume.css
-│ │ ├── App.jsx
-│ │ ├── index.jsx
-│ │ └── App.css
-│ ├── package.json
-│ └── README.md
 
 ## Setup and Installation
 

@@ -20,15 +20,17 @@ This is a single-page application utilizing react. The project showcases various
 ```bash
 git clone git@github.com:PCast71/Meactive-Portfolio.git
 
-Navigate to the project directory:
+2. Navigate to the project directory:
 bash
 Copy code
 cd Meactive-Portfolio/portfolio
-Install the dependencies:
+
+3. Install the dependencies:
 bash
 Copy code
 npm install
-Running the Development Server
+
+4. Running the Development Server
 To start the development server, run:
 
 bash

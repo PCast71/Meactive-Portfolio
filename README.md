@@ -2,6 +2,8 @@
 # Meactive-Portfolio
 
 This is a single-page application utilizing react. The project showcases various sections such as About Me, Portfolio, Contact, and Resume.
+![Screenshot 2024-06-09 190446](https://github.com/PCast71/Meactive-Portfolio/assets/141694878/ed9d4ab9-9ed7-4665-8f2b-5d610fad4940)
+
 
 
 ## Setup and Installation
@@ -48,6 +50,8 @@ Portfolio: Showcases titled images of six of the developer’s applications with
 Contact: Includes a contact form with fields for name, email address, and message. Validates required fields and email format.
 Resume: Provides a downloadable resume link and lists the developer’s proficiencies.
 Footer: Contains links to the developer’s GitHub and LinkedIn profiles.
+
+
 
 Customization
 To customize the content and styles:

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import './styles/Contact.css';
 
 const Contact = () => {
@@ -22,7 +23,34 @@ const Contact = () => {
 
     if (Object.keys(newErrors).length === 0) {
       // Handle form submission
-      alert('Form submitted successfully!');
+      const templateParams = {
+        from_name: name,
+        from_email: email,
+        message: message,
+      };
+
+      console.log('Sending email with the following parameters:', templateParams);
+      console.log('User ID:', process.env.REACT_APP_EMAILJS_USER_ID);
+      console.log('Service ID:', process.env.REACT_APP_EMAILJS_SERVICE_ID);
+      console.log('Template ID:', process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
+
+      emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        process.env.REACT_APP_EMAILJS_USER_ID
+      )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Form submitted successfully!');
+        // Reset form fields
+        setName('');
+        setEmail('');
+        setMessage('');
+      }, (error) => {
+        console.log('FAILED...', error);
+        alert('Failed to submit the form. Please try again.');
+      });
     }
   };
 

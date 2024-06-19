@@ -8,11 +8,9 @@ const About = () => (
     <div className="about-content">
       <img src={profilePhoto} alt="Developer" className="profile" />
       <div className="bio">
-      <p>Hello, my name is <strong>Patrick Castorena</strong>. I am a 27 year old male with a passion for technology and how it all works under the surface.
-                    I am very outdoor oriented, but enjoy the amenities that technology provides in everyday work and personal life as well. I am currently enrolled
-                    in the University of Utah full stack coding bootcamp, in this bootcamp I have learned HTML, CSS, and JavaScript. I hope to broaden my skillset
-                    and find a career in the field I have had a passion for since I was a small child. The grid below will provide some insight into the capabilites 
-                    I currently posess.</p>
+      <p>Hello, my name is <strong>Patrick Castorena</strong>. I am a 27 year old man with a passion for technology and how it all works under the surface.
+                    I am very outdoor oriented, but enjoy the amenities that technology provides in everyday work and personal life. I have recently completed the University of Utah Fullstack Coding Bootcamp,
+                    where I have acquired the skills necessary for server side and front end web development. </p>
       </div>
     </div>
   </section>

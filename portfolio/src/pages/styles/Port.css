@@ -35,8 +35,8 @@
 
 .portfolio-image {
   width: 100%;
-  height: 200px; /* Set a fixed height for all images */
-  object-fit: cover; /* Ensure images cover the area without distortion */
+  height: 200px; /* Fixed height for desktop */
+  object-fit: cover;
   display: block;
 }
 
@@ -72,6 +72,37 @@
 }
 
 .github-logo {
-  width: 30px; /* Increase the size of the GitHub logo */
-  height: 30px; /* Ensure it remains square */
+  width: 30px;
+  height: 30px;
+}
+
+/* New styles for mobile screens */
+@media (max-width: 768px) {
+  /* Switch to single-column layout */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Adjust image height for mobile */
+  .portfolio-image {
+    height: 150px;
+  }
+
+  /* Always show the overlay on mobile */
+  .overlay {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Adjust project name font size */
+  .project-name {
+    font-size: 1rem;
+  }
+
+  /* Adjust GitHub logo size */
+  .github-logo {
+    width: 25px;
+    height: 25px;
+  }
 }

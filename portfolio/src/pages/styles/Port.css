@@ -1,4 +1,44 @@
-/* Existing styles remain unchanged */
+.portfolio-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.portfolio-heading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Grid styles */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.portfolio-item {
+  position: relative;
+}
+
+.portfolio-link {
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 200px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensure images cover the area without distortion */
+  display: block;
+}
 
 .overlay {
   position: absolute;
@@ -32,23 +72,6 @@
 }
 
 .github-logo {
-  width: 30px;
-  height: 30px;
-}
-
-/* New styles for mobile screens */
-@media (max-width: 768px) {
-  .overlay {
-    opacity: 1; /* Always show the overlay on mobile */
-    background: rgba(0, 0, 0, 0.5); /* Slightly lighter overlay for readability */
-  }
-
-  .project-name {
-    font-size: 1rem; /* Slightly smaller font for mobile */
-  }
-
-  .github-logo {
-    width: 25px; /* Adjust GitHub logo size */
-    height: 25px;
-  }
+  width: 30px; /* Increase the size of the GitHub logo */
+  height: 30px; /* Ensure it remains square */
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import cwdLogo from '../assets/cwdLogo.jpg';
+import cwdLogo from '../assets/cwdLogo2.png';
 import '../assets/styles/Nav.css';
 
 const Navigation = () => {

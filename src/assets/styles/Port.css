@@ -1,0 +1,145 @@
+.portfolio-section {
+  padding: 4rem 1.5rem;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+}
+
+.portfolio-heading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #00ffff;
+  text-align: center;
+}
+
+/* 🔘 Filter Buttons */
+.portfolio-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #00ffff;
+  color: #0a0a0a;
+}
+
+/* 🧱 Grid Layout */
+.portfolio-grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* 💻 Card Styles */
+.portfolio-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 255, 255, 0.08);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+/* 🖼 Project Image */
+.portfolio-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+/* ℹ️ Title + GitHub */
+.portfolio-info {
+  padding: 1rem 1.25rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.portfolio-info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #00ffff;
+  margin: 0;
+}
+
+.github-icon {
+  width: 26px;
+  height: 26px;
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.github-icon:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/* 📝 Project Description */
+.portfolio-desc {
+  font-size: 1rem;
+  color: #ccc;
+  margin: 0.75rem 1.25rem 0;
+  text-align: left;
+}
+
+/* 🏷️ Stack Tags */
+.portfolio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem 1.5rem;
+  cursor: pointer;
+}
+
+.tag {
+  background-color: rgba(0, 255, 255, 0.1);
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* 📱 Mobile tweaks */
+@media (max-width: 768px) {
+  .portfolio-img {
+    height: 160px;
+  }
+
+  .portfolio-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .portfolio-tags {
+    justify-content: center;
+  }
+
+  .portfolio-desc {
+    text-align: center;
+  }
+}

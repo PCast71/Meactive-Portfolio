@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import './styles/Contact.css';
+import '../assets/styles/Contact.css';
 
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [errors, setErrors] = useState({});
+  const [status, setStatus] = useState('');
+  const [isSending, setIsSending] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const newErrors = {};
-
     if (!name) newErrors.name = 'This field is required';
     if (!email) newErrors.email = 'This field is required';
     if (!message) newErrors.message = 'This field is required';
@@ -22,17 +23,14 @@ const Contact = () => {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      // Handle form submission
+      setIsSending(true);
+      setStatus('');
+
       const templateParams = {
         from_name: name,
         from_email: email,
         message: message,
       };
-
-      console.log('Sending email with the following parameters:', templateParams);
-      console.log('User ID:', process.env.REACT_APP_EMAILJS_USER_ID);
-      console.log('Service ID:', process.env.REACT_APP_EMAILJS_SERVICE_ID);
-      console.log('Template ID:', process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
 
       emailjs.send(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -40,17 +38,22 @@ const Contact = () => {
         templateParams,
         process.env.REACT_APP_EMAILJS_USER_ID
       )
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('Form submitted successfully!');
-        // Reset form fields
-        setName('');
-        setEmail('');
-        setMessage('');
-      }, (error) => {
-        console.log('FAILED...', error);
-        alert('Failed to submit the form. Please try again.');
-      });
+        .then((response) => {
+          setStatus('Message sent successfully!');
+          setIsSending(false);
+
+          // Reset fields after short delay for nice animation
+          setTimeout(() => {
+            setName('');
+            setEmail('');
+            setMessage('');
+          }, 400);
+        })
+        .catch((error) => {
+          console.error('FAILED...', error);
+          setStatus('Something went wrong. Please try again.');
+          setIsSending(false);
+        });
     }
   };
 
@@ -69,6 +72,7 @@ const Contact = () => {
           />
           {errors.name && <span className="error-message">{errors.name}</span>}
         </div>
+
         <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
@@ -80,17 +84,28 @@ const Contact = () => {
           />
           {errors.email && <span className="error-message">{errors.email}</span>}
         </div>
+
         <div className="form-group">
           <label htmlFor="message">Message:</label>
           <textarea
             id="message"
+            rows="5"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             className={errors.message ? 'input-error' : ''}
           />
           {errors.message && <span className="error-message">{errors.message}</span>}
         </div>
-        <button type="submit" className="submit-button">Submit</button>
+
+        <button type="submit" className="submit-button" disabled={isSending}>
+          {isSending ? 'Sending...' : 'Submit'}
+        </button>
+
+        {status && (
+          <div className={`form-status ${status.includes('successfully') ? 'success' : 'error'}`}>
+            {status}
+          </div>
+        )}
       </form>
     </section>
   );

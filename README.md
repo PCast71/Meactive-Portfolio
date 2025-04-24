@@ -1,70 +1,70 @@
+# Getting Started with Create React App
 
-# Meactive-Portfolio
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This is a single-page application utilizing react. The project showcases various sections such as About Me, Portfolio, Contact, and Resume.
-![Screenshot 2024-06-09 190446](https://github.com/PCast71/Meactive-Portfolio/assets/141694878/ed9d4ab9-9ed7-4665-8f2b-5d610fad4940)
-Netlify Link: https://main--patrickcastorena.netlify.app/
+## Available Scripts
 
+In the project directory, you can run:
 
+### `npm start`
 
-## Setup and Installation
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Prerequisites
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-- Node.js (v14.x or later)
-- npm (v6.x or later)
+### `npm test`
 
-### Installation
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-1. Clone the repository:
+### `npm run build`
 
-```bash
-git clone git@github.com:PCast71/Meactive-Portfolio.git
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-2. Navigate to the project directory:
-bash
-Copy code
-cd Meactive-Portfolio/portfolio
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-3. Install the dependencies:
-bash
-Copy code
-npm install
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-4. Running the Development Server
-To start the development server, run:
+### `npm run eject`
 
-bash
-Copy code
-npm start
-The application will be available at http://localhost:3000.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-Building the Project
-To create a production build, run:
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-bash
-Copy code
-npm run build
-The build artifacts will be stored in the build directory inside portfolio.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-Features
-About Me: Displays a recent photo or avatar of the developer and a short bio.
-Portfolio: Showcases titled images of six of the developer’s applications with links to both the deployed applications and the corresponding GitHub repositories.
-Contact: Includes a contact form with fields for name, email address, and message. Validates required fields and email format.
-Resume: Provides a downloadable resume link and lists the developer’s proficiencies.
-Footer: Contains links to the developer’s GitHub and LinkedIn profiles.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Learn More
 
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Customization
-To customize the content and styles:
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-Assets: Add or replace images and files in the src/assets directory.
-Components: Modify the React components in the src/components directory.
-Pages: Update the content of different sections in the src/pages directory.
-Styles: Adjust the CSS in the respective styles directories under components and pages.
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+### Code Splitting
 
-Acknowledgments
-Thanks to the creators of React and all the libraries used in this project.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

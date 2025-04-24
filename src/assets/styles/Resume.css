@@ -1,0 +1,81 @@
+.resume-section {
+  padding: 4rem 1.5rem;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.resume-heading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #00ffff;
+}
+
+.resume-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.15);
+}
+
+.download-link {
+  display: inline-block;
+  margin-bottom: 2.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #00ffff;
+  color: #0a0a0a;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-link:hover {
+  background-color: #33ffff;
+  transform: translateY(-1px);
+}
+
+.proficiency-title {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #00ffff;
+}
+
+.proficiencies-columns {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.proficiencies-columns ul {
+  list-style: none;
+  padding: 0;
+}
+
+.proficiencies-columns li {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #e0e0e0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proficiencies-columns li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.15);
+}
+
+@media (max-width: 768px) {
+  .proficiencies-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+}
